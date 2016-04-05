@@ -4,10 +4,11 @@ require_once('TwitterAPIExchange.php');
 
 /** Set access tokens here - see: https://dev.twitter.com/apps/ **/
 $settings = array(
-    'oauth_access_token' => "",
-    'oauth_access_token_secret' => "",
-    'consumer_key' => "",
-    'consumer_secret' => ""
+    'oauth_access_token' => "1968176760-FT4k4xYAiacrn1LSSIM1qt8ye3j4keuTxOqtiq4",
+    'oauth_access_token_secret' => "WBlbTTYQ9ptvSiuDeTW7rQPkG93hD2syFrBYTIohe9uSV",
+    'consumer_key' => "6Q98Cp8LsAE2tOxvrWR8apZOU",
+    'consumer_secret' => "Yh5Fzv8PDajC68uwUSvjWLa3cwaHof1tvxTKex8uKj4mSurZOB"
+
 );
 
 /** URL for REST request, see: https://dev.twitter.com/docs/api/1.1/ **/
@@ -16,15 +17,15 @@ $requestMethod = 'POST';
 
 /** POST fields required by the URL above. See relevant docs as above **/
 $postfields = array(
-    'screen_name' => 'usernameToBlock', 
+    'screen_name' => 'usernameToBlock',
     'skip_status' => '1'
 );
 
 /** Perform a POST request and echo the response **/
-$twitter = new TwitterAPIExchange($settings);
-echo $twitter->buildOauth($url, $requestMethod)
-             ->setPostfields($postfields)
-             ->performRequest();
+// $twitter = new TwitterAPIExchange($settings);
+// echo $twitter->buildOauth($url, $requestMethod)
+//              ->setPostfields($postfields)
+//              ->performRequest();
 
 /** Perform a GET request and echo the response **/
 /** Note: Set the GET field BEFORE calling buildOauth(); **/
