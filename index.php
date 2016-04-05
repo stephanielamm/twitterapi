@@ -45,7 +45,8 @@ foreach($tweetData['statuses'] as $index => $items)
 {
 
 
-  echo "<div class='twitter-tweet'>Tweet:" . $items['text'] . "'</div>'";
+  echo "<div class='twitter-tweet'>Tweet:" . $items['text'] . "'</div></br>'";
   echo "When: " . $items['created_at'] . "</br>";
+  echo "Where: " .$items['location']. "</br>";
 }
 ?>
