@@ -30,7 +30,7 @@ $postfields = array(
 /** Perform a GET request and echo the response **/
 /** Note: Set the GET field BEFORE calling buildOauth(); **/
 $url = 'https://api.twitter.com/1.1/search/tweets.json';
-$getfield = '?q=%23baseball';
+$getfield = '?q=%23HB2';
 $requestMethod = 'GET';
 $twitter = new TwitterAPIExchange($settings);
 // echo $twitter->setGetfield($getfield)
@@ -48,5 +48,7 @@ foreach($tweetData['statuses'] as $index => $items)
   echo "<div class='twitter-tweet'>Tweet:" . $items['text'] . "'</div></br>'";
   echo "When: " . $items['created_at'] . "</br>";
   echo "Where: " .$items['location']. "</br>";
+
+
 }
 ?>
